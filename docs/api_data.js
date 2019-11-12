@@ -2,6 +2,63 @@ define({ "api": [
   {
     "version": "1.0.0",
     "type": "get",
+    "url": "/authenticate",
+    "title": "Authenticate user by username and password.",
+    "name": "GetAuthTokenByUserCredentals",
+    "group": "Authentication",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Object",
+            "optional": false,
+            "field": "AuthRequestBodyDto",
+            "description": "<p>User credentials.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "AuthRequestBodyDto.username",
+            "description": "<p>Username of the user</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "AuthRequestBodyDto.password",
+            "description": "<p>Password of the user</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "AuthResponseBodyDto",
+            "description": "<p>Authentication response.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "AuthResponseBodyDto.token",
+            "description": "<p>JWT token.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "./src/main/java/com/ganesh/bankifsc/controller/AuthController.java",
+    "groupTitle": "Authentication"
+  },
+  {
+    "version": "1.0.0",
+    "type": "get",
     "url": "/branches",
     "title": "Get All Bank branch details (Paginated).",
     "name": "GetByBankNameAndCity",

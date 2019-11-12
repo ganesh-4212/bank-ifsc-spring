@@ -27,7 +27,19 @@ public class AuthController {
 	private JwtTokenUtil jwtTokenUtil;
 	@Autowired
 	private UserDetailsService userDetailsService;
-
+	
+	/**
+	 * @apiVersion 1.0.0
+	 * @api {get} /authenticate Authenticate user by username and password.
+	 * @apiName GetAuthTokenByUserCredentals
+	 * @apiGroup Authentication
+	 * @apiParam {Object} AuthRequestBodyDto User credentials.
+	 * @apiParam {String} AuthRequestBodyDto.username Username of the user
+	 * @apiParam {String} AuthRequestBodyDto.password Password of the user
+	 * 
+	 * @apiSuccess {Object} AuthResponseBodyDto Authentication response.
+	 * @apiSuccess {String} AuthResponseBodyDto.token JWT token.
+	 */
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthRequestBodyDto authenticationRequest) throws Exception {
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
