@@ -31,7 +31,14 @@
             "description": "<p>Password of the user</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"username\": \"ganesh4212\"\n  \"password\": \"ganesh4212\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {

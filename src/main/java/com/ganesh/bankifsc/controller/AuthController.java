@@ -36,6 +36,11 @@ public class AuthController {
 	 * @apiParam {Object} AuthRequestBodyDto User credentials.
 	 * @apiParam {String} AuthRequestBodyDto.username Username of the user
 	 * @apiParam {String} AuthRequestBodyDto.password Password of the user
+	 * @apiParamExample {json} Request-Example:
+	 *     {
+	 *       "username": "ganesh4212"
+	 *       "password": "ganesh4212"
+	 *     }
 	 * 
 	 * @apiSuccess {Object} AuthResponseBodyDto Authentication response.
 	 * @apiSuccess {String} AuthResponseBodyDto.token JWT token.
